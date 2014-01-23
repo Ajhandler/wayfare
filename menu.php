@@ -26,20 +26,32 @@ Template Name: Menu
 <?php endwhile; endif; ?>
 
 <!-- Get food custom post type loops -->
+
+<!-- set padding with a container -->
 <div class="container">
+	<!-- keep everything cleared -->
 	<div class="row">
+
+		<!-- Set width for list of food -->
 		<div class="laptop-six padded panel-large">
+			<!-- Food title -->
 			<h3 class="text-center">Sandwiches</h3><br>
+
+			<!-- Set up a custom loop, grab post type (always food_item) and taxonomy (i.e. sandwich) -->
 			<?php $myposts = get_posts('post_type=food_item&food_type=sandwich');
+			// Set up the post type as a WP post
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			
+			<!-- Markup for how you want it displayed -->
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
 			    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );
 			    if(!empty($meta_value)) {echo $meta_value;}?>
 			</p>
+			<!-- close loop -->
 			<?php endforeach; ?>
 		</div>
 
+		<!-- rinse,wash,repeat -->
 		<div class="laptop-six padded panel-large">
 			<h3 class="text-center">Bar Fare</h3><br>
 			<?php $myposts = get_posts('post_type=food_item&food_type=bar-fare');

@@ -1,0 +1,1 @@
+$(document).ready(function(){$("iframe,embed").fitVids()});

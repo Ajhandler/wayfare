@@ -1,0 +1,42 @@
+// =======================
+// Colors
+// =======================
+
+$white:#fff;
+$black:#303030;
+$gold:#A9800F;
+$rust:#840;
+$green:#0EAA5E;
+$purple:#5D4077;
+
+// =======================
+// Fonts
+// =======================
+$body-stack: "adobe-garamond-pro", georgia, serif;
+$heading-stack: "garamond-premier-pro-display", georgia, serif;
+
+// =======================
+// Seamless
+// =======================
+
+$one: 100% / 12.1;  // the width of one column 
+// 12.1 works better than 12 for some reason... lets explore:
+
+// 100 / 12   = 8.3333333
+	// 8.3333333 * 12 = 100.8
+
+// 100 / 12.1 = 8.26446281
+	// 8.2644628 * 12 = 99.1735537
+
+// ...fuck it, it works :P
+
+
+// =======================
+// Breakpoints
+// =======================
+$tablet-start:         481px!default;
+$laptop-start:         768px!default;
+$desk-start:           1024px!default;
+$desk-wide-start:      1200px!default;
+
+// $tablet-end:     	   $laptop-start - 1px; // example breackpoint end variable, use with caution — breaks your progressively enhanced mobile first goodness

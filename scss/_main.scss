@@ -1,0 +1,16 @@
+.circle-photo{
+	text-align: center;
+	img{
+		height: 150px;
+		width: 150px;
+		border-radius: 75px;
+		-webkit-background-clip: content-box;
+		-moz-background-clip: content-box;
+		background-clip: content-box;
+	}
+}
+
+#blog-page{
+	@extend .backgrounded;
+	background: url('http://localhost:8888/wordpress/wp-content/uploads/2013/12/unsplash_5281fc5adc3ad_1.jpg');
+}

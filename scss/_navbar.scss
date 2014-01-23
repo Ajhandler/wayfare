@@ -1,0 +1,131 @@
+/* =Menu
+----------------------------------------------- */
+// body{
+// 	padding-top: 24px;
+// 	padding-top: 2.4rem;
+// }
+#masthead{
+	font-family: $heading-stack;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-size: 2rem;
+	line-height: 24px;
+	line-height: 2.4rem;
+	position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+	z-index: 499; 
+	background:rgba(255,255,255,0.85);
+	text-align: center;
+	border-bottom: 2px solid $rust;
+	&.loggedin{
+		top:46px;
+		@media(min-width:783px){
+			top: 32px;
+		}
+	}
+}
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		ul {
+			font-size: 1em;
+			background:rgba(255,255,255,0.85);
+			height: 0;
+			float: left;
+			text-align: left;
+			left: 0;
+			position: absolute;
+			top: 61px;
+			top: 2.4rem;
+			z-index: 499;
+			overflow: hidden;
+			display: block;
+			ul {
+				left: 100%;
+				top: 0px;
+				border-top: 2px solid $rust;
+				border-left: none;
+			}
+			a {
+				width: 200px;
+				padding: .4em;
+				color: $black;
+				text-shadow: none;
+				&:after{content:'';}
+				&:hover, &:focus{
+					color: $rust;
+				}
+			}
+		}
+		li:hover > ul {
+			height: auto;
+			overflow: visible;
+			border: 2px solid $rust;
+			border-top: none;
+			ul{
+
+			}
+		}
+	}
+	li {
+		display: inline-block;
+		position: relative;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: $rust;
+		letter-spacing: 3px;
+		border: none;
+		padding: 0 .75em;
+		// &:after{content: " ♦ "; color:$black;}
+		// &:last-child:after{ content: none;}
+		&:hover,&:focus,&:active{
+			color:$black;
+			background: none;
+		}
+	}
+}
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+	display: none;
+	@extend .wayfared;
+}
+
+@media screen and (max-width: 782px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+		top:500;
+		& > li{
+			display:block;
+			text-align: left;
+			border-bottom: 1px solid $rust;
+			&:last-child{
+				border:none;
+			}
+			&:after{
+				content: "";
+			}
+		}
+	}
+
+	.main-navigation{
+		ul{
+			display: none;
+			& ul{
+				display: none;
+			}
+		}
+	}
+}

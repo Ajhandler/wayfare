@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Seamless
+   ========================================================================== */
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.container-small{
+    @extend .container;
+    @media (min-width: $laptop-start) {
+        width: 45%;
+    }
+}
+.row{
+    clear: both;
+}
+// .one, .two, .three,
+// .four, .five, .six,
+// .seven, .eight, .nine,
+// .ten, .eleven, .twelve{ 
+//     // kill padding on nests till I think of a better fix. This is going to be hugigantinormous.
+//     .one, .two, .three,
+//     .four, .five, .six,
+//     .seven, .eight, .nine,
+//     .ten, .eleven, .twelve{ 
+//         padding: 0;
+//     }
+// }
+
+@mixin grid-setup($namespace: "") {
+    %grid{
+        float: left;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+    // main widths
+    .#{$namespace}one            { @extend %grid; width:$one ; }
+    .#{$namespace}two            { @extend %grid; width:$one * 2; }
+    .#{$namespace}three          { @extend %grid; width:$one * 3; }
+    .#{$namespace}four           { @extend %grid; width:$one * 4; }
+    .#{$namespace}five           { @extend %grid; width:$one * 5; }
+    .#{$namespace}six            { @extend %grid; width:$one * 6; }
+    .#{$namespace}seven          { @extend %grid; width:$one * 7; }
+    .#{$namespace}eight          { @extend %grid; width:$one * 8; }
+    .#{$namespace}nine           { @extend %grid; width:$one * 9; }
+    .#{$namespace}ten            { @extend %grid; width:$one * 10; }
+    .#{$namespace}eleven         { @extend %grid; width:$one * 11; }
+    .#{$namespace}twelve         { @extend %grid; width:$one * 12; }
+
+    // simple offsets
+    .#{$namespace}offset-one            { margin-left:$one ; }
+    .#{$namespace}offset-two            { margin-left:$one * 2; }
+    .#{$namespace}offset-three          { margin-left:$one * 3; }
+    .#{$namespace}offset-four           { margin-left:$one * 4; }
+    .#{$namespace}offset-five           { margin-left:$one * 5; }
+    .#{$namespace}offset-six            { margin-left:$one * 6; }
+    .#{$namespace}offset-seven          { margin-left:$one * 7; }
+    .#{$namespace}offset-eight          { margin-left:$one * 8; }
+    .#{$namespace}offset-nine           { margin-left:$one * 9; }
+    .#{$namespace}offset-ten            { margin-left:$one * 10; }
+    .#{$namespace}offset-eleven         { margin-left:$one * 11; }
+    .#{$namespace}offset-twelve         { margin-left:$one * 12; }
+
+    // simple pulls
+    .#{$namespace}pull-right{float: right;}
+    .#{$namespace}pull-left{float: left;}
+}
+
+@include grid-setup();
+
+@mixin media-query($media-query){
+    @if $media-query == tablet{
+        @media only screen and (min-width:$tablet-start) { @content; }
+    }
+
+    @if $media-query == laptop{
+        @media only screen and (min-width:$laptop-start) { @content; }
+    }
+
+    @if $media-query == desk{
+        @media only screen and (min-width:$desk-start) { @content; }
+    }
+	
+	// only uncomment if you really need something for huge screens
+    // @if $media-query == desk-wide{
+    //     @media only screen and (min-width: $desk-wide-start) { @content; }
+    // }
+}
+
+@include media-query(tablet){
+    @include grid-setup("tablet-");
+}
+
+@include media-query(laptop){
+    @include grid-setup("laptop-");
+}
+
+@include media-query(desk){
+    @include grid-setup("desk-");
+}
+.padded{
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-left: 6.4rem;
+    padding-right: 6.4rem;
+}

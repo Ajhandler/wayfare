@@ -32,7 +32,7 @@ Template Name: Catering
 	<div class="row">
 		<div class="laptop-six padded panel-large">
 			<h3 class="text-center">Assorted Slider Platters</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=catering-platter');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=catering-platter');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
 			    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );
@@ -43,7 +43,7 @@ Template Name: Catering
 
 		<div class="laptop-six padded panel-large">
 			<h3 class="text-center">Sides</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=catering-side');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=catering-side');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
 			    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );
@@ -56,7 +56,7 @@ Template Name: Catering
 	<div class="row">
 		<div class="laptop-four padded panel-large">
 			<h3 class="text-center">Soups</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=catering-soup');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=catering-soup');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
 			    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );
@@ -66,7 +66,7 @@ Template Name: Catering
 		</div>
 		<div class="laptop-four padded panel-large">
 			<h3 class="text-center">Sides</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=catering-side');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=catering-side');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
 			    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );
@@ -76,7 +76,7 @@ Template Name: Catering
 		</div>
 		<div class="laptop-four padded panel-large">
 			<h3 class="text-center">Sweets</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=catering-sweet');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=catering-sweet');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
 			    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );

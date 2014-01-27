@@ -31,7 +31,7 @@ Template Name: Bar
 	<div class="row">
 		<div class="laptop-four padded panel-large">
 			<h3 class="text-center">Beer</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=beer');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=beer');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
 			    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );
@@ -41,7 +41,7 @@ Template Name: Bar
 		</div>
 		<div class="laptop-four padded panel-large">
 			<h3 class="text-center">Wine</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=wine');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=wine');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
 			    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );
@@ -51,7 +51,7 @@ Template Name: Bar
 		</div>
 		<div class="laptop-four padded panel-large">
 			<h3 class="text-center">Cocktails</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=cocktail');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=cocktail');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
 			    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );

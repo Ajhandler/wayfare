@@ -26,7 +26,7 @@ get_header(); ?>
 
 						<div class="entry-meta">
 							<p><?php the_excerpt(); ?></p>
-							<p>$<?php
+							<p><?php
 							    // Retrieves the stored value from the database
 							    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );
 							    // Checks and displays the retrieved value

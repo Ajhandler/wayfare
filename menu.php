@@ -38,7 +38,7 @@ Template Name: Menu
 			<h3 class="text-center">Sandwiches</h3><br>
 
 			<!-- Set up a custom loop, grab post type (always food_item) and taxonomy (i.e. sandwich) -->
-			<?php $myposts = get_posts('post_type=food_item&food_type=sandwich');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=sandwich ');
 			// Set up the post type as a WP post
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			
@@ -54,7 +54,7 @@ Template Name: Menu
 		<!-- rinse,wash,repeat -->
 		<div class="laptop-six padded panel-large">
 			<h3 class="text-center">Bar Fare</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=bar-fare');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=bar-fare');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
@@ -68,7 +68,7 @@ Template Name: Menu
 	<div class="row">
 		<div class="laptop-four padded panel-large">
 			<h3 class="text-center">Soups</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=soup');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=soup');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
@@ -80,7 +80,7 @@ Template Name: Menu
 
 		<div class="laptop-four padded panel-large">
 			<h3 class="text-center">Salads</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=salad');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=salad');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
@@ -92,7 +92,7 @@ Template Name: Menu
 
 		<div class="laptop-four padded panel-large">
 			<h3 class="text-center">Sides</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=side');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=side');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
@@ -107,7 +107,7 @@ Template Name: Menu
 
 		<div class="laptop-six padded panel-large">
 			<h3 class="text-center">Desserts</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=dessert');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=dessert');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
@@ -119,7 +119,7 @@ Template Name: Menu
 
 		<div class="laptop-six padded panel-large">
 			<h3 class="text-center">Kid's Menu</h3><br>
-			<?php $myposts = get_posts('post_type=food_item&food_type=kids');
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=kids');
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php

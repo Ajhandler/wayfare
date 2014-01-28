@@ -65,8 +65,12 @@ Template Name: Catering
 			<?php endforeach; ?>
 		</div>
 		<div class="laptop-four padded panel-large">
-			<h3 class="text-center">Sides</h3><br>
-			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=catering-side');
+
+			
+
+			<h3 class="text-center">Pasta Trays</h3><br>
+			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=catering-tray');
+
 			foreach($myposts as $post) : setup_postdata($post); ?>
 			<p class="food-menu-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?> $<?php
 			    $meta_value = get_post_meta( get_the_ID(), 'meta-text', true );

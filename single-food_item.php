@@ -23,7 +23,7 @@ get_header(); ?>
 				endif; ?> >
 					<div class="container-small">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
-
+<!-- Allows for the price to show on the picture
 						<div class="entry-meta">
 							<p><?php the_excerpt(); ?></p>
 							<p><?php
@@ -34,7 +34,7 @@ get_header(); ?>
 							        echo $meta_value;
 							    }
 							?></p>
-						</div>
+						</div> -->
 					</div><!-- .entry-meta -->
 				</header><!-- .entry-header -->
 				<div class="panel-large">

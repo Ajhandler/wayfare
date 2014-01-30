@@ -68,7 +68,7 @@ Template Name: Catering
 
 			
 
-			<h3 class="text-center">Pasta Trays</h3><br>
+			<h3 class="text-center">Trays</h3><br>
 			<?php $myposts = get_posts('posts_per_page=>-1&post_type=food_item&food_type=catering-tray');
 
 			foreach($myposts as $post) : setup_postdata($post); ?>

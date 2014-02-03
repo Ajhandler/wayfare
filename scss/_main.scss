@@ -14,3 +14,19 @@
 	@extend .backgrounded;
 	background: url('http://localhost:8888/wordpress/wp-content/uploads/2013/12/unsplash_5281fc5adc3ad_1.jpg');
 }
+@media screen and (max-width: 796px){
+    .panel-full{
+	@extend %panel;
+	height: 100%;
+	//height: 100vh;
+	max-height: 100%;
+	//max-height: 100vh;
+	display: table;
+	overflow: hidden;
+	box-shadow: inset 0 0px 6px 1px rgba(0,0,0,0.3);
+	& > .container, & > .container-small{
+		@extend .valign;
+		text-align: center;
+	}
+  }
+}
